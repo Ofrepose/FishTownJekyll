@@ -1,0 +1,21 @@
+---
+layout: default
+title: About
+---
+
+
+<h1>About me</h1>
+
+
+<ul>
+  {% for author in site.authors %}
+    {% if author.short_name == 'daniel' %}
+
+      <li>
+        <h2>{{ author.name }}</h2>
+        <h3>{{ author.position }}</h3>
+        <p>{{ author.content | markdownify }}</p>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
